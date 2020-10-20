@@ -17,4 +17,9 @@ list_of_downloaded_files <-
   ) %>% 
   .[endsWith(., "DADOS")  ]
 
-read_and_process_saeb_ate_2005(list_of_downloaded_files[5])
+purrr::walk(
+  list_of_downloaded_files,
+  read_and_process_saeb_ate_2005
+)
+
+# read_and_process_saeb_ate_2005(list_of_downloaded_files[1])

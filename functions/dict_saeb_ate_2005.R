@@ -858,6 +858,217 @@ dict_saeb_ate_2005 <-
             } else
               if(stringr::str_detect(file_name, "2005")) {
                 
+                if(stringr::str_detect(file_name, "MATEMATICA_04SERIE")) {
+                  
+                  readr::fwf_widths(
+                    c(8, 8, 8, 2, 1, 3, 23, 3, 1, 3, 3, 6,
+                      3, 3, 3, 2, 1, 3, rep(12, 4), rep(3, 4),
+                      rep(1, 39), rep(13, 3), 12, 12,
+                      rep(1, 24), rep(1, 42)),
+                    col_names = c(
+                      "MASCARA", "ANO_MASCARA", "ANO", "SERIE", "DISC", 
+                      "TURMA", "NOMETURMA", "TURMA_APLI", "EXTRA", 
+                      "ALUNO", "ALUNO_VALI", "ESTRATO", "DEP_ADM",
+                      "LOCAL", "REDE", "COD_UF", "REGIAO", "CAPITAL",
+                      "PESO_AT", "PESO_AC", "PESO_EC", "PESO_TC",
+                      "CADERNO", "BLOCO1", "BLOCO2", "BLOCO3", 
+                      paste0("RESP", 1:39), 
+                      "GAB_BL1", "GAB_BL2", "GAB_BL3", "PROFIC_250", "PROFIC_SAEB",
+                      paste0("A041_", stringr::str_pad(1:24, 3, pad = "0")),
+                      paste0("A042M", stringr::str_pad(1:42, 3, pad = "0"))
+                    )
+                  )
+                  
+                } else if(stringr::str_detect(file_name, "MATEMATICA_08SERIE")) {
+                  
+                  readr::fwf_widths(
+                    c(8, 8, 8, 2, 1, 3, 29, 3, 1, 3, 3, 6,
+                      3, 3, 3, 2, 1, 3, rep(12, 4), rep(3, 4),
+                      rep(1, 39), rep(13, 3), 12, 12,
+                      rep(1, 22), rep(1, 50)),
+                    col_names = c(
+                      "MASCARA", "ANO_MASCARA", "ANO", "SERIE", "DISC", 
+                      "TURMA", "NOMETURMA", "TURMA_APLI", "EXTRA", 
+                      "ALUNO", "ALUNO_VALI", "ESTRATO", "DEP_ADM",
+                      "LOCAL", "REDE", "COD_UF", "REGIAO", "CAPITAL",
+                      "PESO_AT", "PESO_AC", "PESO_EC", "PESO_TC",
+                      "CADERNO", "BLOCO1", "BLOCO2", "BLOCO3", 
+                      paste0("RESP", 1:39), 
+                      "GAB_BL1", "GAB_BL2", "GAB_BL3", "PROFIC_250", "PROFIC_SAEB",
+                      paste0("A081_", stringr::str_pad(1:22, 3, pad = "0")),
+                      paste0("A082M", stringr::str_pad(1:50, 3, pad = "0"))
+                    )
+                  )
+                  
+                } else if(stringr::str_detect(file_name, "MATEMATICA_03ANO")) {
+                  
+                  readr::fwf_widths(
+                    c(8, 8, 8, 2, 1, 3, 30, 3, 1, 3, 3, 6,
+                      3, 3, 3, 2, 1, 3, rep(12, 4), rep(3, 4),
+                      rep(1, 39), rep(13, 3), 12, 12,
+                      rep(1, 22), rep(1, 51)),
+                    col_names = c(
+                      "MASCARA", "ANO_MASCARA", "ANO", "SERIE", "DISC", 
+                      "TURMA", "NOMETURMA", "TURMA_APLI", "EXTRA", 
+                      "ALUNO", "ALUNO_VALI", "ESTRATO", "DEP_ADM",
+                      "LOCAL", "REDE", "COD_UF", "REGIAO", "CAPITAL",
+                      "PESO_AT", "PESO_AC", "PESO_EC", "PESO_TC",
+                      "CADERNO", "BLOCO1", "BLOCO2", "BLOCO3", 
+                      paste0("RESP", 1:39), 
+                      "GAB_BL1", "GAB_BL2", "GAB_BL3", "PROFIC_250", "PROFIC_SAEB",
+                      paste0("A111_", stringr::str_pad(1:22, 3, pad = "0")),
+                      paste0("A112M", stringr::str_pad(1:51, 3, pad = "0"))
+                    )
+                  )
+                  
+                } else if(stringr::str_detect(file_name, "PORTUGUES_04SERIE")) {
+                  
+                  readr::fwf_widths(
+                    c(8, 8, 8, 2, 1, 3, 23, 3, 1, 3, 3, 6,
+                      3, 3, 3, 2, 3, 3, rep(12, 4), rep(3, 4),
+                      rep(1, 39), rep(13, 3), 12, 12,
+                      rep(1, 24), rep(1, 42)),
+                    col_names = c(
+                      "MASCARA", "ANO_MASCARA", "ANO", "SERIE", "DISC", 
+                      "TURMA", "NOMETURMA", "TURMA_APLI", "EXTRA", 
+                      "ALUNO", "ALUNO_VALI", "ESTRATO", "DEP_ADM",
+                      "LOCAL", "REDE", "COD_UF", "REGIAO", "CAPITAL",
+                      "PESO_AT", "PESO_AC", "PESO_EC", "PESO_TC",
+                      "CADERNO", "BLOCO1", "BLOCO2", "BLOCO3", 
+                      paste0("RESP", 1:39), 
+                      "GAB_BL1", "GAB_BL2", "GAB_BL3", "PROFIC_250", "PROFIC_SAEB",
+                      paste0("A041_", stringr::str_pad(1:24, 3, pad = "0")),
+                      paste0("A042M", stringr::str_pad(1:42, 3, pad = "0"))
+                    )
+                  )
+                  
+                } else if(stringr::str_detect(file_name, "PORTUGUES_08SERIE")) {
+                  
+                  readr::fwf_widths(
+                    c(8, 8, 8, 2, 1, 3, 29, 3, 1, 3, 3, 6,
+                      3, 3, 3, 2, 3, 3, rep(12, 4), rep(3, 4),
+                      rep(1, 39), rep(13, 3), 12, 12,
+                      rep(1, 22), rep(1, 50)),
+                    col_names = c(
+                      "MASCARA", "ANO_MASCARA", "ANO", "SERIE", "DISC", 
+                      "TURMA", "NOMETURMA", "TURMA_APLI", "EXTRA", 
+                      "ALUNO", "ALUNO_VALI", "ESTRATO", "DEP_ADM",
+                      "LOCAL", "REDE", "COD_UF", "REGIAO", "CAPITAL",
+                      "PESO_AT", "PESO_AC", "PESO_EC", "PESO_TC",
+                      "CADERNO", "BLOCO1", "BLOCO2", "BLOCO3", 
+                      paste0("RESP", 1:39), 
+                      "GAB_BL1", "GAB_BL2", "GAB_BL3", "PROFIC_250", "PROFIC_SAEB",
+                      paste0("A081_", stringr::str_pad(1:22, 3, pad = "0")),
+                      paste0("A082M", stringr::str_pad(1:50, 3, pad = "0"))
+                    )
+                  )
+                  
+                } else if(stringr::str_detect(file_name, "PORTUGUES_03ANO")) {
+                  
+                  readr::fwf_widths(
+                    c(8, 8, 8, 2, 1, 3, 30, 3, 1, 3, 3, 6,
+                      3, 3, 3, 2, 3, 3, rep(12, 4), rep(3, 4),
+                      rep(1, 39), rep(13, 3), 12, 12,
+                      rep(1, 22), rep(1, 51)),
+                    col_names = c(
+                      "MASCARA", "ANO_MASCARA", "ANO", "SERIE", "DISC", 
+                      "TURMA", "NOMETURMA", "TURMA_APLI", "EXTRA", 
+                      "ALUNO", "ALUNO_VALI", "ESTRATO", "DEP_ADM",
+                      "LOCAL", "REDE", "COD_UF", "REGIAO", "CAPITAL",
+                      "PESO_AT", "PESO_AC", "PESO_EC", "PESO_TC",
+                      "CADERNO", "BLOCO1", "BLOCO2", "BLOCO3", 
+                      paste0("RESP", 1:39), 
+                      "GAB_BL1", "GAB_BL2", "GAB_BL3", "PROFIC_250", "PROFIC_SAEB",
+                      paste0("A111_", stringr::str_pad(1:22, 3, pad = "0")),
+                      paste0("A112M", stringr::str_pad(1:51, 3, pad = "0"))
+                    )
+                  )
+                  
+                } else if(stringr::str_detect(file_name, "DIRETOR_05")) {
+                  
+                  readr::fwf_widths(
+                    c(rep(8, 3), rep(3, 3), 2, 8, 3, 12,
+                      rep(1, 113), rep(1, 40), rep(1, 4), rep(1, 12)),
+                    col_names = c(
+                      "MASCARA", "ANO_MASCARA", "ANO", "DEP_ADM", "LOCAL",
+                      "REDE", "COD_UF", "REGIAO", "CAPITAL", "PESO_TC",
+                      paste0("Q", 1:113),
+                      "Q114_1", "Q114_2", "Q115_1", "Q115_2", "Q116_1", "Q116_2",
+                      "Q117_1", "Q117_2", "Q118_1", "Q118_2", "Q119_1", "Q119_2",
+                      "Q120_1", "Q120_2", "Q121_1", "Q121_2", "Q122_1", "Q122_2",
+                      "Q123_1", "Q123_2", "Q124_1", "Q124_2", "Q125_1", "Q125_2",
+                      "Q126_1", "Q126_2", "Q127_1", "Q127_2", "Q128_1", "Q128_2",
+                      "Q129_1", "Q129_2", "Q130_1", "Q130_2", "Q131_1", "Q131_2",
+                      "Q132_1", "Q132_2", "Q133_1", "Q133_2",
+                      paste0("Q", 134:137),
+                      "Q138_1", "Q138_2", "Q139_1", "Q139_2", "Q140_1", "Q140_2",
+                      "Q141_1", "Q141_2", "Q142_1", "Q142_2", "Q143_1", "Q143_2"
+                    )
+                  )
+                  
+                } else if(stringr::str_detect(file_name, "DOCENTE_05")) {
+                  
+                  readr::fwf_widths(
+                    c(rep(8, 3), 2, 1, 8, 23, 3, 1, 6, rep(3, 3),
+                      2, 8, 3, 12, 12,
+                      rep(1, 18), rep(1, 3), rep(1, 105)),
+                    col_names = c(
+                      "MASCARA", "ANO_MASCARA", "ANO", "SERIE", "DISC",
+                      "TURMA", "NOMETURMA", "TURMA_APLI", "EXTRA", "ESTRATO",
+                      "DEP_ADM", "LOCAL", "REDE", "COD_UF", "REGIAO", "CAPITAL",
+                      "PESO_EC", "PESO_TC",
+                      paste0("Q", 1:18),
+                      "Q19_1", "Q19_2", "Q19_3",
+                      paste0("Q", 20:124)
+                    )
+                  )
+                  
+                } else if(stringr::str_detect(file_name, "ESCOLA_05")) {
+                  
+                  readr::fwf_widths(
+                    c(rep(8, 3), rep(3, 3), 2, 8, 3, 12,
+                      rep(1, 70)),
+                    col_names = c(
+                      "MASCARA", "ANO_MASCARA", "ANO", "DEP_ADM",
+                      "LOCAL", "REDE", "COD_UF", "REGIAO", "CAPITAL",
+                      "PESO_TC",
+                      paste0("Q1_", 1:9),
+                      paste0("Q2_", 1:2),
+                      paste0("Q3_", 1:9),
+                      paste0("Q4_", 1:16),
+                      paste0("Q5_", 1:6),
+                      paste0("Q6_", 1:10),
+                      paste0("Q7_", 1:5),
+                      "Q8", "Q9", "Q10", "Q11", "Q12", "Q13",
+                      paste0("Q14_", 1:5),
+                      "Q15", "Q16"
+                    )
+                  )
+                  
+                } else if(stringr::str_detect(file_name, "TURMA_05")) {
+                  
+                  readr::fwf_widths(
+                    c(rep(8, 3), 2, 8, 23, 3, 1, 6, rep(3, 3),
+                      2, 8, 3, 12, 12, rep(1, 4), 4, 4, rep(2, 32)),
+                    col_names = c(
+                      "MASCARA", "ANO_MASCARA", "ANO", "SERIE", "TURMA",
+                      "NOMETURMA", "TURMA_APLI", "EXTRA", "ESTRATO",
+                      "DEP_ADM", "LOCAL", "REDE", "COD_UF", "REGIAO",
+                      "CAPITAL", "PESO_EC", "PESO_TC", 
+                      "ITEM1_1", "ITEM1_2", "ITEM2_1", "ITEM2_2",
+                      "ITEM3", "ITEM4", "ITEM5", "ITEM6",
+                      paste0("ITEM7_", 1:30)
+                    )
+                  )
+                  
+                } else {
+                  
+                  NA
+                  
+                }
+                
+              } else {
+                
                 NA
                 
               }
