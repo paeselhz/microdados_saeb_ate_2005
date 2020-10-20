@@ -840,6 +840,15 @@ dict_saeb_ate_2005 <-
                   )
                 )
                 
+              } else if(stringr::str_detect(file_name, "MASCARA")) {
+                
+                readr::fwf_widths(
+                  c(8, 8, 10),
+                  col_names = c(
+                    "MASCARA", "ANO_MASCARA", "ESCOLA"
+                  )
+                )
+                
               } else {
                 
                 NA
