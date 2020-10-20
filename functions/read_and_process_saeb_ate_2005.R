@@ -1,4 +1,4 @@
-read_and_process_saeb_pre_2007 <-
+read_and_process_saeb_ate_2005 <-
   function(data_folder,
            dest_folder_prefix = 'data/processed') {
     
@@ -35,7 +35,7 @@ read_and_process_saeb_pre_2007 <-
         tbl_read <-
           readr::read_fwf(
             filename,
-            col_positions = dict_saeb_pre_2005(filename)
+            col_positions = dict_saeb_ate_2005(filename)
           )
         
         readr::write_rds(
