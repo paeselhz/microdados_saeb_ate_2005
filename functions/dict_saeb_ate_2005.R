@@ -651,5 +651,205 @@ dict_saeb_ate_2005 <-
               
             }
             
-          }
+          } else 
+            if(stringr::str_detect(file_name, "2003")) {
+              
+              if(stringr::str_detect(file_name, "MATEMATICA_04SERIE")) {
+                
+                readr::fwf_widths(
+                  c(8, 8, 4, 2, 1, 2, 3, 12, 12, rep(8, 16), rep(13, 6), 12, 15,
+                    rep(8, 58), rep(8, 18)),
+                  col_names = c(
+                    "MASCARA", "ANO_MASCARA", "ANO", "SERIE", "DISC",
+                    "TURMA", "ALUNO", "ESTRATO", "UPA", "DEP_ADM", "LOCAL",
+                    "REDE", "UF", "UFSUD", "REGIAO", "TAM_MUNIC", "REG_METROP",
+                    "TAM_CID", "TUR_BE", "ALU_BE", "PESO_AC",
+                    "CADERNO", "BLOCO1", "BLOCO2", "BLOCO3", 
+                    "RESP_BL1", "RESP_BL2", "RESP_BL3",
+                    "GAB_BL1", "GAB_BL2", "GAB_BL3", 
+                    "PROFIC", "ESTAGIO",
+                    paste0("A041_", stringr::str_pad(1:58, 3, pad = "0")),
+                    paste0("A042M", stringr::str_pad(1:18, 3, pad = "0"))
+                  )
+                )
+                
+              } else if(stringr::str_detect(file_name, "MATEMATICA_08SERIE")) {
+                
+                readr::fwf_widths(
+                  c(8, 8, 4, 2, 1, 2, 3, 8, 12, rep(8, 16), rep(13, 6), 12, 8,
+                    rep(8, 64), rep(8, 23)),
+                  col_names = c(
+                    "MASCARA", "ANO_MASCARA", "ANO", "SERIE", "DISC",
+                    "TURMA", "ALUNO", "ESTRATO", "UPA", "DEP_ADM", "LOCAL",
+                    "REDE", "UF", "UFSUD", "REGIAO", "TAM_MUNIC", "REG_METROP",
+                    "TAM_CID", "TUR_BE", "ALU_BE", "PESO_AC",
+                    "CADERNO", "BLOCO1", "BLOCO2", "BLOCO3", 
+                    "RESP_BL1", "RESP_BL2", "RESP_BL3",
+                    "GAB_BL1", "GAB_BL2", "GAB_BL3", 
+                    "PROFIC", "ESTAGIO",
+                    paste0("A081_", stringr::str_pad(1:64, 3, pad = "0")),
+                    paste0("A042M", stringr::str_pad(1:23, 3, pad = "0"))
+                  )
+                )
+                
+              } else if(stringr::str_detect(file_name, "MATEMATICA_03ANO")) {
+                
+                readr::fwf_widths(
+                  c(8, 8, 4, 2, 1, 2, 3, 8, 12, rep(8, 16), rep(13, 6), 12, 8,
+                    rep(8, 64), rep(8, 23)),
+                  col_names = c(
+                    "MASCARA", "ANO_MASCARA", "ANO", "SERIE", "DISC",
+                    "TURMA", "ALUNO", "ESTRATO", "UPA", "DEP_ADM", "LOCAL",
+                    "REDE", "UF", "UFSUD", "REGIAO", "TAM_MUNIC", "REG_METROP",
+                    "TAM_CID", "TUR_BE", "ALU_BE", "PESO_AC",
+                    "CADERNO", "BLOCO1", "BLOCO2", "BLOCO3", 
+                    "RESP_BL1", "RESP_BL2", "RESP_BL3",
+                    "GAB_BL1", "GAB_BL2", "GAB_BL3", 
+                    "PROFIC", "ESTAGIO",
+                    paste0("A111_", stringr::str_pad(1:64, 3, pad = "0")),
+                    paste0("A112M", stringr::str_pad(1:23, 3, pad = "0"))
+                  )
+                )
+                
+              } else if(stringr::str_detect(file_name, "PORTUGUES_04SERIE")) {
+                
+                readr::fwf_widths(
+                  c(8, 8, 4, 2, 1, 2, 3, 8, 12, rep(8, 16), rep(13, 6), 12, 8,
+                    rep(8, 58), rep(8, 18)),
+                  col_names = c(
+                    "MASCARA", "ANO_MASCARA", "ANO", "SERIE", "DISC",
+                    "TURMA", "ALUNO", "ESTRATO", "UPA", "DEP_ADM", "LOCAL",
+                    "REDE", "UF", "UFSUD", "REGIAO", "TAM_MUNIC", "REG_METROP",
+                    "TAM_CID", "TUR_BE", "ALU_BE", "PESO_AC",
+                    "CADERNO", "BLOCO1", "BLOCO2", "BLOCO3", 
+                    "RESP_BL1", "RESP_BL2", "RESP_BL3",
+                    "GAB_BL1", "GAB_BL2", "GAB_BL3", 
+                    "PROFIC", "ESTAGIO",
+                    paste0("A041_", stringr::str_pad(1:58, 3, pad = "0")),
+                    paste0("A042L", stringr::str_pad(1:18, 3, pad = "0"))
+                  )
+                )
+                
+              } else if(stringr::str_detect(file_name, "PORTUGUES_08SERIE")) {
+                
+                readr::fwf_widths(
+                  c(8, 8, 4, 2, 1, 2, 3, 8, 12, rep(8, 16), rep(13, 6), 12, 8,
+                    rep(8, 64), rep(8, 23)),
+                  col_names = c(
+                    "MASCARA", "ANO_MASCARA", "ANO", "SERIE", "DISC",
+                    "TURMA", "ALUNO", "ESTRATO", "UPA", "DEP_ADM", "LOCAL",
+                    "REDE", "UF", "UFSUD", "REGIAO", "TAM_MUNIC", "REG_METROP",
+                    "TAM_CID", "TUR_BE", "ALU_BE", "PESO_AC",
+                    "CADERNO", "BLOCO1", "BLOCO2", "BLOCO3", 
+                    "RESP_BL1", "RESP_BL2", "RESP_BL3",
+                    "GAB_BL1", "GAB_BL2", "GAB_BL3", 
+                    "PROFIC", "ESTAGIO",
+                    paste0("A081_", stringr::str_pad(1:64, 3, pad = "0")),
+                    paste0("A082L", stringr::str_pad(1:23, 3, pad = "0"))
+                  )
+                )
+                
+              } else if(stringr::str_detect(file_name, "PORTUGUES_03ANO")) {
+                
+                readr::fwf_widths(
+                  c(8, 8, 4, 2, 1, 2, 3, 8, 12, rep(8, 16), rep(13, 6), 12, 8,
+                    rep(8, 64), rep(8, 23)),
+                  col_names = c(
+                    "MASCARA", "ANO_MASCARA", "ANO", "SERIE", "DISC",
+                    "TURMA", "ALUNO", "ESTRATO", "UPA", "DEP_ADM", "LOCAL",
+                    "REDE", "UF", "UFSUD", "REGIAO", "TAM_MUNIC", "REG_METROP",
+                    "TAM_CID", "TUR_BE", "ALU_BE", "PESO_AC",
+                    "CADERNO", "BLOCO1", "BLOCO2", "BLOCO3", 
+                    "RESP_BL1", "RESP_BL2", "RESP_BL3",
+                    "GAB_BL1", "GAB_BL2", "GAB_BL3", 
+                    "PROFIC", "ESTAGIO",
+                    paste0("A111_", stringr::str_pad(1:64, 3, pad = "0")),
+                    paste0("A112L", stringr::str_pad(1:23, 3, pad = "0"))
+                  )
+                )
+                
+              } else if(stringr::str_detect(file_name, "DIRETOR_03")) {
+                
+                readr::fwf_widths(
+                  c(8, 8, 4, 2, 8, 12, rep(8, 10),
+                    rep(8, 129), rep(8, 50)),
+                  col_names = c(
+                    "MASCARA", "ANO_MASCARA", "ANO", "SERIE", "ESTRATO",
+                    "UPA", "PESOEC", "DEP_ADM", "LOCAL", "REDE", "UF",
+                    "UFSUD", "REGIAO", "TAM_MUNIC", "REG_METROP", "TAM_CID",
+                    paste0("D", stringr::str_pad(1:129, 3, pad = "0")),
+                    "D130_1", "D130_2", "D131_1", "D131_2", "D132_1", "D132_2",
+                    "D133_1", "D133_2", "D134_1", "D134_2", "D135_1", "D135_2",
+                    "D136_1", "D136_2", "D137_1", "D137_2", "D138_1", "D138_2",
+                    "D139_1", "D139_2", "D140_1", "D140_2", "D141_1", "D141_2",
+                    "D142_1", "D142_2", "D143_1", "D143_2", "D144_1", "D144_2",
+                    "D145_1", "D145_2", "D146_1", "D146_2", "D147_1", "D147_2",
+                    "D148_1", "D148_2", "D149_1", "D149_2",
+                    "D150", "D151", "D152", "D153",
+                    "D154_1", "D155_1", "D156_1", "D157_1", "D158_1", "D159_1"
+                  )
+                )
+                
+              } else if(stringr::str_detect(file_name, "DOCENTE_03")) {
+                
+                readr::fwf_widths(
+                  c(8, 8, 4, 2, 1, 2, 8, 12, rep(8, 10),
+                    rep(8, 12), rep(8, 3), rep(8, 125)),
+                  col_names = c(
+                    "MASCARA", "ANO_MASCARA", "ANO", "SERIE", "DISC",
+                    "TURMA", "ESTRATO", "UPA", "PESOTC", "DEP_ADM", 
+                    "LOCAL", "REDE", "UF", "UFSUD", "REGIAO",
+                    "TAM_MUNIC", "REG_METROP", "TAM_CID",
+                    paste0("P", stringr::str_pad(1:12, 3, pad = "0")),
+                    "P013_1", "P013_2", "P013_3",
+                    paste0("P", stringr::str_pad(14:138, 3, pad = "0"))
+                  )
+                )
+                
+              } else if(stringr::str_detect(file_name, "ESCOLA_03")) {
+                
+                readr::fwf_widths(
+                  c(8, 8, 4, 2, 8, 12, rep(8, 10),
+                    rep(8, 70)),
+                  col_names = c(
+                    "MASCARA", "ANO_MASCARA", "ANO", "SERIE", "ESTRATO",
+                    "UPA", "PESOEC", "DEP_ADM", "LOCAL", "REDE", "UF",
+                    "UFSUD", "REGIAO", "TAM_MUNIC", "REG_METROP", "TAM_CID",
+                    paste0("E001_", 1:9),
+                    paste0("E002_", 1:2),
+                    paste0("E003_", 1:9),
+                    paste0("E004_", 1:16),
+                    paste0("E005_", 1:6),
+                    paste0("E006_", 1:10),
+                    paste0("E007_", 1:5),
+                    "E008", "E009", "E010", "E011", "E012", "E013",
+                    paste0("E014_", 1:5), "E015", "E016"
+                  )
+                )
+                
+              } else if(stringr::str_detect(file_name, "TURMA_03")) {
+                
+                readr::fwf_widths(
+                  c(8, 8, 4, 2, 2, 8, 12, rep(8, 10), 4, 4, 2, 2, rep(8, 4)),
+                  col_names = c(
+                    "MASCARA", "ANO_MASCARA", "ANO", "SERIE", "TURMA", "ESTRATO",
+                    "UPA", "PESOTC", "DEP_ADM", "LOCAL", "REDE", "UF", "UFSUD",
+                    "REGIAO", "TAM_MUNIC", "REG_METROP", "TAM_CID",
+                    "HO_INICIO", "HO_FINAL", "QT_ALUNO", "QT_PRES", 
+                    "T001_1", "T001_2", "T002_1", "T002_2"
+                  )
+                )
+                
+              } else {
+                
+                NA
+                
+              }
+              
+            } else
+              if(stringr::str_detect(file_name, "2005")) {
+                
+                NA
+                
+              }
   }
