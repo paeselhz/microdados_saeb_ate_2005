@@ -5,7 +5,7 @@ source('functions/download_saeb_ate_2005.R')
 source('functions/read_and_process_saeb_ate_2005.R')
 
 purrr::walk(
-  seq(1995, 2001, 2),
+  seq(1995, 2005, 2),
   download_saeb_ate_2005
 )
 
